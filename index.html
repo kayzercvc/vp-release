@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocky's Project</title>
+    <link rel="icon" type="image/png" href="fav.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #212121;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 0 0 10px #FCFCFC, 0 0 20px #FCFCFC, 0 0 40px #FCFCFC
+        }
+        .block {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px;
+            text-align: left;
+        }
+        .block img {
+            width: 180px;
+            height: 180px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .button1 {
+  --black: #000000;
+  --ch-black: #141414;
+  --eer-black: #1b1b1b;
+  --night-rider: #2e2e2e;
+  --white: #ffffff;
+  --af-white: #f3f3f3;
+  --ch-white: #e1e1e1;
+  border-radius: 8px;
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0px 15px;
+  border: none;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  font-weight: 700;
+  transition-duration: .2s;
+  background-color: var(--ch-black);
+}
+
+.button1:before, .button:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, 
+  var(--ch-black), var(--eer-black),
+  var(--night-rider), var(--ch-white), var(--night-rider), 
+    var(--eer-black), var(--ch-black),var(--ch-black));
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button1:after {
+  filter: blur(50px);
+}
+        .advertisement-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .advertisement-content {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+        }
+        .advertisement-content h3 {
+            margin-top: 0;
+        }
+        .advertisement-content p {
+            margin-bottom: 20px;
+        }
+        .advertisement-image img {
+            width: 436px;
+            height: 230px;
+            background-color: #777; /* Placeholder color */
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px 5px #5536d1; /* Stronger white glow */
+        }
+        .advertisement-buttons {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+}
+.button {
+  font-family: inherit;
+  background: #2CA0D9;
+  color: white;
+  padding: 0.35em 0;
+  font-size: 17px;
+  border: none;
+  border-radius: 0.7em;
+  letter-spacing: 0.08em;
+  position: relative;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 2.5em;
+  padding-left: 2.8em;
+  padding-right: 0.92em;
+}
+.button a {
+    text-decoration: none;
+    color: white;
+}
+.button .icon {
+  background: #fff;
+  height: 2em;
+  width: 2em;
+  border-radius: 2em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0.4em;
+  transition: all 0.5s;
+}
+
+.icon svg {
+  margin-left: 0.1em;
+  transition: all 0.5s;
+  color: #2CA0D9;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.button:hover .icon svg {
+  transform: rotate(360deg);
+}
+
+.button:hover .icon {
+  width: calc(100% - 0.85rem);
+  border-radius: 0.5em;
+}
+.ui-btn {
+  cursor: pointer;
+  border-radius: 5px;
+  color: rgb(219, 218, 218);
+  border-style: solid;
+  background-color: transparent;
+  border-color: rgb(219, 218, 218);
+  width: 120px;
+  height: 40px;
+  transition: 0.2s ease;
+  text-transform: uppercase;
+  border-width: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.ui-btn:hover {
+  color: rgb(247, 247, 247);
+  background-color: rgb(202, 25, 25);
+  border-color: rgb(202, 25, 25);
+  text-shadow: 0 0 50px white, 0 0 20px white, 0 0 15px white;
+  box-shadow: 0 0 50px rgb(202, 25, 25), 0 0 30px rgb(202, 25, 25),
+    0 0 60px rgb(202, 25, 25), 0 0 120px rgb(202, 25, 25);
+  font-size: 20px;
+  width: 130px;
+  height: 50px;
+  letter-spacing: 3px;
+}
+.ui-btn:active {
+  width: 115px;
+  height: 38px;
+  letter-spacing: 0px;
+}
+
+    </style>
+</head>
+<body>
+       <div class="advertisement-overlay">
+        <div class="advertisement-content">
+            <div class="advertisement-image">
+                <img src="ad.jpg">
+            </div>
+            <h3>Vocky VPS Seller</h3>
+            <p><b>Почему мы?</b><br>
+                <br>Сервера по доступным ценам!<br>
+                <br>Большой выбор локаций!<br>
+                <br>Скорость до 10гбит/с!<br>
+                <br>Большой выбор ОС!<br>
+                <br>Встроенный поддомен!<br>
+                <br>Встроенный скрипт!<br>
+                <br>Отзывчивая поддержка!<br>
+                <br>Быстрые сервера!<br>
+            </p>
+            <div class="advertisement-buttons">
+                <form action="https://t.me/vocky_seller" target="_blank">
+                <button class="button" href="https://t.me/vocky">
+  <div class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z" href="https://t.me/vocky_seller"></path>
+    </svg>
+  </div>
+  <a href="https://t.me/vocky_seller">Telegram</a>
+
+</button>
+</form>
+                <button class="ui-btn" onclick="closeAdvertisement()">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>V O C K Y</h1>
+        <div class="block">
+            <img src="image1.jpg" alt="DRAGON">
+            <h2>Dragon VPS Manager</h2><br>
+            <a href="dragon.html" class="button1">Перейти</a>
+        </div>
+        <div class="block">
+            <img src="image2.jpg" alt="MARZBAN">
+            <h2>Marzban</h2><br>
+            <a href="marzban.html" class="button1">Перейти</a>
+        </div>
+        <div class="block">
+            <img src="image3.jpg" alt="YORU">
+            <h2>Yoru's Script</h2><br>
+            <a href="yoru.html" class="button1">Перейти</a>
+        </div>
+                <div class="block">
+            <img src="image4.jpg" alt="3X UI">
+            <h2>3X-UI</h2><br>
+            <a href="3xui.html" class="button1">Перейти</a>
+        </div>
+                        <div class="block">
+            <img src="image5.jpg" alt="HIDDIFY">
+            <h2>Hiddify</h2><br>
+            <a href="hiddify.html" class="button1">Перейти</a>
+        </div>
+                                <div class="block">
+            <img src="image3.jpg" alt="X UI">
+            <h2>X-UI</h2><br>
+            <a href="xui.html" class="button1">Перейти</a>
+        </div>
+    </div>
+        <script>
+        function closeAdvertisement() {
+            document.querySelector('.advertisement-overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

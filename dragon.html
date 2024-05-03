@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon VPS Manager | Vocky's project</title>
+    <link rel="icon" type="image/png" href="fav.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #212121;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .image {
+            text-align: center;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .details {
+            margin-top: 20px;
+        }
+        .details h2 {
+            margin-bottom: 10px;
+        }
+        .details p {
+            margin-bottom: 20px;
+        }
+        .example {
+            margin-bottom: 20px;
+        }
+        .example input {
+            width: 70%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .example .button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .copy-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.copy-text {
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+  --purple: #9B7EDA;
+  font-size: 12px;
+  padding: 0.8em 3em;
+  letter-spacing: 0.08em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--purple);
+  background: linear-gradient(to right, rgba(155, 126, 218, 0.1) 1%, transparent 40%, transparent 60%, rgba(155, 126, 218, 0.1) 100%);
+  color: var(--purple);
+  box-shadow: inset 0 0 10px rgba(155, 126, 218, 0.4), 0 0 9px 3px rgba(155, 126, 218, 0.1);
+}
+
+button:hover {
+  color: #BFA3F3;
+  box-shadow: inset 0 0 10px rgba(155, 126, 218, 0.6), 0 0 9px 3px rgba(155, 126, 218, 0.2);
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform .4s ease-in-out;
+  background: linear-gradient(to right, transparent 1%, rgba(155, 126, 218, 0.1) 40%, rgba(155, 126, 218, 0.1) 60%, transparent 100%);
+}
+
+button:hover:before {
+  transform: translateX(15em);
+}
+
+h1 {
+    color: #9d9fa1;
+    font-size: 10px;
+}
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+h3 {
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+img {
+     width: 180px;
+    height: 180px;
+     display: block;
+     margin: 0 auto 10px;
+}
+        h34 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 0 0 10px #FCFCFC, 0 0 20px #FCFCFC, 0 0 40px #FCFCFC
+            }
+                        a{
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: aqua;
+            text-decoration: none;
+            text-shadow: 0 0 10px #FCFCFC, 0 0 20px #FCFCFC, 0 0 40px #FCFCFC
+            }
+            .a1 {
+                           font-size: 16px;
+            margin-bottom: 20px;
+            color: white;
+            text-decoration: none;
+            text-shadow: 0 0 10px #FCFCFC, 0 0 20px #FCFCFC, 0 0 40px #FCFCFC 
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h34><b>V O C K Y</b></h34><br><br><a class="a1" href="https://t.me/vocky_seller">Купить VPS</a><br><br><a class="a1" href="index.html">Вернуться на главную страницу</a><br>
+        <br><a href="https://t.me/wakgy">Мой телеграм</a><br><br><br><br><br><br>
+        <div class="image">
+            <img src="image1.jpg" alt="dragon jpg">
+        </div>
+        <div class="details">
+            <h2>Dragon VPS Manager</h2>
+            <h3>Update System Packages and Install SCRIPT:</h3>
+<div class="copy-container">
+    <div class="copy-text" id="copyText"><h1>apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/januda-ui/DRAGON-VPS-MANAGER/main/hehe; chmod 777 hehe;./hehe
+</h1></div>
+    <button onclick="copyText()">COPY</button>
+</div>
+        </div>
+    </div>
+
+    <script>
+function copyText() {
+    var text = document.getElementById("copyText");
+    var range = document.createRange();
+    range.selectNode(text);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+    alert("Текст скопирован: " + text.innerText);
+}
+
+    </script>
+</body>
+</html>
